@@ -212,8 +212,9 @@ const splitUnits = function(type, progress, units, existingUnits, excludedUnits)
     return existingUnitNames.indexOf(name) >= 0;
   }).value();
 
-  progress.log('Adding ' + toAddUnitNames.length + ' ' + type + ' and Updating ' + toUpdateUnitNames.length +
-    type + '.  If implemented would be Deleting ' + toDeleteUnitNames.length + ' ' + type);
+  progress.log('Adding ' + toAddUnitNames.length + ' ' + type + ': ' + toAddUnitNames.join(', '));
+  progress.log('Updating ' + toUpdateUnitNames.length + ' ' + type + ': ' + toUpdateUnitNames.join(', '));
+  progress.log('If implemented would be Deleting ' + toDeleteUnitNames.length + ' ' + type + ': ' + toDeleteUnitNames.join(', '));
 
   /*
   Create set of units that we need to add with the config information
